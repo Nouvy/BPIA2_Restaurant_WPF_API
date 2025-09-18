@@ -12,7 +12,7 @@
             <ColumnDefinition Width="393*"/>
             <ColumnDefinition Width="407*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Valider" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,303,0,0" VerticalAlignment="Top" Height="21" Width="120" />
+        <Button Content="Valider" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,303,0,0" VerticalAlignment="Top" Height="21" Width="120" Click="Valider_Click"/>
         <TextBox x:Name="tbx_nom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Nom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,179,0,0" VerticalAlignment="Top" Height="29" Width="50"/>
         <TextBox x:Name="tbx_prix_ttc" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>

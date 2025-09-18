@@ -14,7 +14,7 @@ namespace BPIA2_Restaurant_WPF_API.Models
         public float PrixTTC { get; set; }
         public float TauxTva { get; set; }
 
-        public List<Menu> Menus { get; set; }
-        public List<Commande> Commandes { get; set; }
+        public List<Menu> Menus { get; set; } = new List<Menu>();
+        public List<Commande> Commandes { get; set; } = new List<Commande>();
     }
 }

@@ -9,26 +9,21 @@ using BPIA2_Restaurant_WPF_API.Models;
 
 namespace BPIA2_Restaurant_WPF_API.Services
 {
-    public class ApiArticleService
+    public class ApiMenuService
     {
         private readonly HttpClient _httpClient;
 
-        public ApiArticleService()
+        public ApiMenuService()
         {
             _httpClient = new HttpClient
             {
-                BaseAddress = new System.Uri("https://localhost:7181/api/") 
+                BaseAddress = new System.Uri("https://localhost:7181/api/")
             };
         }
 
-        public async Task<List<Article>> GetArticlesAsync()
+        public async Task AddMenuAsync(Menu menu)
         {
-            return await _httpClient.GetFromJsonAsync<List<Article>>("Article");
-        }
-
-        public async Task AddArticleAsync(Article article)
-        {
-            var response = await _httpClient.PostAsJsonAsync("Article", article);
+            var response = await _httpClient.PostAsJsonAsync("Menu", menu);
             response.EnsureSuccessStatusCode();
         }
     }
