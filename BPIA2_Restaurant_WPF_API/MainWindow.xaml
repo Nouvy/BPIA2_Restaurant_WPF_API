@@ -1,0 +1,32 @@
+﻿<Window x:Class="BPIA2_Restaurant_WPF_API.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BPIA2_Restaurant_WPF_API"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="393*"/>
+            <ColumnDefinition Width="407*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Valider" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,303,0,0" VerticalAlignment="Top" Height="21" Width="120" />
+        <TextBox x:Name="tbx_nom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Nom" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,179,0,0" VerticalAlignment="Top" Height="29" Width="50"/>
+        <TextBox x:Name="tbx_prix_ttc" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="tbx_taux_tva" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Prix TTC" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="29" Width="50"/>
+        <Label Content="Taux TVA" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Height="24" Width="61"/>
+        <ComboBox x:Name="Cbx_Choix" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="76,123,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cbx_Choix_SelectionChanged">
+            <ComboBoxItem Content="Article"/>
+            <ComboBoxItem Content="Menu"/>
+            <ComboBoxItem Content="Commande"/>
+            <ComboBoxItem Content="Table"/>
+            <ComboBoxItem Content="Utilisateur"/>
+        </ComboBox>
+        <ListBox x:Name="Lbx_Articles" Grid.ColumnSpan="2" Margin="205,137,10,137" Visibility="Collapsed"/>
+    </Grid>
+        
+</Window>
